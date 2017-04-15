@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body style="padding:0px; margin:0px; background-color:#fff;font-family:'Open Sans',sans-serif,arial,helvetica,verdana">
+
+    <!-- #region Jssor Slider Begin -->
+    <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script src="js/jssor.slider-23.1.0.mini.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+
+            var jssor_1_options = {
+              $AutoPlay: 12,
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $ThumbnailNavigatorOptions: {
+                $Class: $JssorThumbnailNavigator$,
+                $Cols: 11,
+                $SpacingX: 8,
+                $SpacingY: 8,
+                $Align: 400
+              }
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+        });
+    </script>
+    <style>
+        /* jssor slider arrow navigator skin 06 css */
+        /*
+        .jssora06l                  (normal)
+        .jssora06r                  (normal)
+        .jssora06l:hover            (normal mouseover)
+        .jssora06r:hover            (normal mouseover)
+        .jssora06l.jssora06ldn      (mousedown)
+        .jssora06r.jssora06rdn      (mousedown)
+        .jssora06l.jssora06lds      (disabled)
+        .jssora06r.jssora06rds      (disabled)
+        */
+        .jssora06l, .jssora06r {
+            display: block;
+            position: absolute;
+            /* size of arrow element */
+            width: 45px;
+            height: 45px;
+            cursor: pointer;
+            background: url('img/a06.png') no-repeat;
+            overflow: hidden;
+        }
+        .jssora06l { background-position: -8px -38px; }
+        .jssora06r { background-position: -68px -38px; }
+        .jssora06l:hover { background-position: -128px -38px; }
+        .jssora06r:hover { background-position: -188px -38px; }
+        .jssora06l.jssora06ldn { background-position: -248px -38px; }
+        .jssora06r.jssora06rdn { background-position: -308px -38px; }
+        .jssora06l.jssora06lds { background-position: -8px -38px; opacity: .3; pointer-events: none; }
+        .jssora06r.jssora06rds { background-position: -68px -38px; opacity: .3; pointer-events: none; }
+        /* jssor slider thumbnail navigator skin 01 css *//*.jssort01 .p            (normal).jssort01 .p:hover      (normal mouseover).jssort01 .p.pav        (active).jssort01 .p.pdn        (mousedown)*/.jssort01 .p {    position: absolute;    top: 0;    left: 0;    width: 72px;    height: 72px;}.jssort01 .t {    position: absolute;    top: 0;    left: 0;    width: 100%;    height: 100%;    border: none;}.jssort01 .w {    position: absolute;    top: 0px;    left: 0px;    width: 100%;    height: 100%;}.jssort01 .c {    position: absolute;    top: 0px;    left: 0px;    width: 68px;    height: 68px;    border: #000 2px solid;    box-sizing: content-box;    background: url('img/t01.png') -800px -800px no-repeat;    _background: none;}.jssort01 .pav .c {    top: 2px;    _top: 0px;    left: 2px;    _left: 0px;    width: 68px;    height: 68px;    border: #000 0px solid;    _border: #fff 2px solid;    background-position: 50% 50%;}.jssort01 .p:hover .c {    top: 0px;    left: 0px;    width: 70px;    height: 70px;    border: #fff 1px solid;    background-position: 50% 50%;}.jssort01 .p.pdn .c {    background-position: 50% 50%;    width: 68px;    height: 68px;    border: #000 2px solid;}* html .jssort01 .c, * html .jssort01 .pdn .c, * html .jssort01 .pav .c {    /* ie quirks mode adjust */    width /**/: 72px;    height /**/: 72px;}
+            h1 {
+                text-align: center;
+            }
+    </style>
+
+    <h1>Slider with Jssor</h1>
+
+    <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:900px;height:600px;overflow:hidden;visibility:hidden;">
+        <!-- Loading Screen -->
+        <div data-u="loading" style="position:absolute;top:0px;left:0px;background-color:rgba(0,0,0,0.7);">
+            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+            <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+        </div>
+        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:900px;height:600px;overflow:hidden;">
+            <div>
+                <img data-u="image" src="img/p1.jpg" />
+                <img data-u="thumb" src="img/p1t.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="img/p2.jpg" />
+                <img data-u="thumb" src="img/p2t.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="img/p3.jpg" />
+                <img data-u="thumb" src="img/p3t.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="img/p4.jpg" />
+                <img data-u="thumb" src="img/p4t.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="img/p5.jpg" />
+                <img data-u="thumb" src="img/p5t.jpg" />
+            </div>
+        </div>
+        <!-- Thumbnail Navigator -->
+        <div data-u="thumbnavigator" class="jssort01" style="position:absolute;left:0px;bottom:0px;width:900px;height:100px;" data-autocenter="1">
+            <!-- Thumbnail Item Skin Begin -->
+            <div data-u="slides" style="cursor: default;">
+                <div data-u="prototype" class="p">
+                    <div class="w">
+                        <div data-u="thumbnailtemplate" class="t"></div>
+                    </div>
+                    <div class="c"></div>
+                </div>
+            </div>
+            <!-- Thumbnail Item Skin End -->
+        </div>
+        <!-- Arrow Navigator -->
+        <span data-u="arrowleft" class="jssora06l" style="top:0px;left:8px;width:45px;height:45px;" data-autocenter="2"></span>
+        <span data-u="arrowright" class="jssora06r" style="top:0px;right:8px;width:45px;height:45px;" data-autocenter="2"></span>
+    </div>
+    <!-- #endregion Jssor Slider End -->
+</body>
+</html>
